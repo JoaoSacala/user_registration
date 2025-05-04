@@ -17,7 +17,8 @@ app.setErrorHandler((error, request, reply) => {
     await app.register(routes)
     
     try {
-        await app.listen({ port: +(process.env.PORT ?? 3333) });
+        await app.listen({ port: +(process.env.PORT ?? 3333), host: process.env.HOST ?? "0.0.0.0" });
+
         app.log.info(`Server listening on ${app.server.address()}`);
     }catch (err) {
         process.exit(1);
