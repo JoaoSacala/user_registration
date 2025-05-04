@@ -1,3 +1,5 @@
+import { api } from "../services/api"
+
 interface CustomerProps {
     name: string
     email: string
@@ -7,11 +9,8 @@ interface CustomerProps {
   
 export async function getCustomer(): Promise<CustomerProps[]> {
 
-    const response = await fetch(`${process.env.BASE_URL}/customers`, {
-      next: { tags: ['customers'] },
-    })
-    const data = await response.json();
-    return data as CustomerProps[];
+    const response = await api.get<CustomerProps[]>('/customers')
+    return response.data;
 
   } 
 
