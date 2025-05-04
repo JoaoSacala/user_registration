@@ -81,7 +81,7 @@ async function handleDelete(id: string) {
       </form>
 
       <section className="flex flex-col gap-4">
-        {customers.map((customer) => (
+        {customers && customers.map((customer) => (
           <article key={customer.id} className="w-full bg-white rounded p-2 relative hover:scale-105 transition-all duration-200">
           <p>Nome:<span className="font-medium"> {customer.name}</span></p>
           <p>Email:<span className="font-medium"> {customer.email}</span></p>
