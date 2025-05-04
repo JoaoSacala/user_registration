@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className=" w-full min-h-screen bg-gray-900 flex justify-center">
       <main className="my-10 w-full md:max-w-2xl">
-        <h1 className="text-4xl font-medium text-white">Clientes</h1>
+        <h1 className="text-4xl font-medium text-white">User Regitration Next</h1>
         <form action={createCustomer} className="flex flex-col gap-4 mt-10">
     
             <label htmlFor="name" className="text-white font-semibold">
