@@ -7,7 +7,7 @@
     "build": "tsc -p tsconfig.json",
     "test": "vitest",
     "start": "node -r tsconfig-paths/register  dist/server.js",
-    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate": "prisma db push",
     "prisma:generate": "prisma generate",
     "deploy": "yarn --frozen-lockfile install && yarn prisma:generate && yarn prisma:migrate && yarn prisma db seed && yarn build"
   },
