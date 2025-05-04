@@ -1,7 +1,3 @@
-
-import { revalidateTag } from "next/cache"
-import { api } from "../services/api"
-
 interface CustomerProps {
     name: string
     email: string
