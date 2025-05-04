@@ -17,7 +17,7 @@ interface CustomerProps {
     // getCustomer.ts
  export async function getCustomer(): Promise<CustomerProps[]> {
   const res = await fetch(`${process.env.BASE_URL}/customers`, {
-    next: { tags: ['customers'] }, // ✅ essa tag será revalidada quando necessário
+    next: { tags: ['customer'] }, // ✅ essa tag será revalidada quando necessário
   })
   const data = await res.json();
   return data as CustomerProps[];
